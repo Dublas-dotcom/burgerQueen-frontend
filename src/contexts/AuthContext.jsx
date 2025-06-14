@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   // ✅ Real API login
   const login = async (email, password, rememberMe = false) => {
     try {
-      const res = await fetch('http://localhost:5000/auth/login', {
+      const res = await fetch('https://burgerqueen.onrender.com/auth/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ email, password }),
@@ -63,7 +63,7 @@ export const AuthProvider = ({ children }) => {
   // ✅ Real API register
   const register = async ({ username, email, password }) => {
     try {
-      const res = await fetch('http://localhost:5000/auth/register', {
+      const res = await fetch('https://burgerqueen.onrender.com/auth/register', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, email, password }),
